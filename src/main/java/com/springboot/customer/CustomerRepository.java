@@ -1,12 +1,9 @@
 package com.springboot.customer;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.util.Collections;
 import java.util.List;
 
-public class CustomerRepository implements CustomerRepo {
-
-    public List<Customer> getCustomers() {
-        //TODO : implement real database
-        return Collections.emptyList();
-    }
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 }
